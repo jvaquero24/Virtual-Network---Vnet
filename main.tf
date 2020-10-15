@@ -9,12 +9,12 @@ resource "azurerm_virtual_network" "VNET" {
   address_space       = var.address_space
 
   subnet {
-    name           = "DBS"
-    address_prefix = var.subnet_1
+    name           = var.name_subnet_1
+    address_prefix = var.IPsubnet_1
   }
 
   subnet {
-    name           = "INFO"
-    address_prefix = var.subnet_2
+    name           = var.name_subnet_2
+    address_prefix = var.IPsubnet_2
   }  
 }
